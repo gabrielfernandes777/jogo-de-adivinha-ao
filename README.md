@@ -1,1 +1,2 @@
-# jogo-de-adivinha-ao
+# Jogo-Adivinha-o
+Aulas de Python

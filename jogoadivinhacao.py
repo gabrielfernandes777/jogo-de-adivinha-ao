@@ -7,19 +7,25 @@ numeroSecreto = 38
 
 #definindo o numero de tentativas
 numerosTentativas = 3
+rodada = 1
 
-while(numerosTentativas > 0):
-    print('ok')
+while(rodada <= numerosTentativas):
+
+    print('tentativa' ,rodada, 'de', numerosTentativas)
 
 #Recebendo o cute do jogador
     chuteString = input('Digite um número: ')
-    print('Você digitou o número', chuteString)
+    
     chute = int(chuteString)
 
 #Declaraçao as condicões
-    if numeroSecreto == chute:
+    if (numeroSecreto == chute):
         print('Você acertou!')
+        break
     elif(chute>numeroSecreto):
         print('Você errou!! O número secreto é um número menor')
     else:
         print('Você errou!! O número secreto é um número maior')
+
+    #numerosTentativas = numerosTentativas - 1
+        rodada = rodada + 1

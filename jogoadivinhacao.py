@@ -1,24 +1,25 @@
+import random;
+
 print('*********************************')
 print('Bem vindo, ao JOGO DE ADIVINHAÇÃO')
 print('*********************************')
 
-#Definindo o numero secreto
-numeroSecreto = 38
+#Definindo o número secreto
+numeroSecreto = round(random.random()*100)
+#print(numeroSecreto)
 
-#definindo o numero de tentativas
-numerosTentativas = 3
+#Definindo o número de tentativas e rodada
+numeroTentativas = 5
 rodada = 1
 
-while(rodada <= numerosTentativas):
+while(rodada <= numeroTentativas):
+    print('Tentativa',rodada, 'de' , numeroTentativas)
 
-    print('tentativa' ,rodada, 'de', numerosTentativas)
-
-#Recebendo o cute do jogador
-    chuteString = input('Digite um número: ')
-    
+#Recebendo o chute do jogador
+    chuteString = input('Digite um número entre 1 e 100: ')
     chute = int(chuteString)
 
-#Declaraçao as condicões
+#Declarando as condições
     if (numeroSecreto == chute):
         print('Você acertou!')
         break
@@ -27,5 +28,10 @@ while(rodada <= numerosTentativas):
     else:
         print('Você errou!! O número secreto é um número maior')
 
-    #numerosTentativas = numerosTentativas - 1
-        rodada = rodada + 1
+    #numeroTentativas = numeroTentativas - 1
+    rodada = rodada + 1
+
+
+
+#Aula Elif 26.02.24
+

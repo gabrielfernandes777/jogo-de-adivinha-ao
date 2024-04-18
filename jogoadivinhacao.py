@@ -14,7 +14,16 @@ rodada = 1
 print("qual nivel de dificudade?")
 print("(1)-facil, (2)-medio, (3)-dificil")
 
-nivel - int(input("defina o nivel: "))
+nivel = int(input("defina o nivel: "))
+
+#Vamos mudar o numero de tentativas conforme a dificudade
+if(nivel == 1):
+    numeroTentativas = 15
+elif(nivel == 2):
+    numeroTentativas = 10
+else:
+    numeroTentativas = 5
+
 
 while(rodada <= numeroTentativas):
     print('Tentativa',rodada, 'de' , numeroTentativas)

@@ -6,20 +6,22 @@ def jogar_forca():
     #Definir qual a palavra secreta
     palavraSecreta = "arvore"
 
+    letras_acertadas = ["_","_","_","_","_","_"]
+
     enforcou = False
     acertou = False
 
     #Enquanto o jogador não se "enforcar" E não acertar a palavra, faça algo
     while(not enforcou and not acertou):
-       
         chute = input ("qual a letra?")
+        chute = chute.strip()
 
         index = 0
         for letra in palavraSecreta:
-            if(chute == letra):
-                print("Encontrei a letra {} na posiçao {}".format(letra, index))
+            if(chute.upper() == letra.upper()):
+                letras_acertadas[index] = letra
             index = index + 1
-
+        print(letras_acertadas)
         
 
     print("Fim de jogo!")
